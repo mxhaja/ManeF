@@ -1,0 +1,54 @@
+@import "../../../../css/_mixins.scss";
+@import "../../../../css/_trx_addons.vars.scss";
+
+//@mixin sc_igenerator--sm() {
+@media #{$media_sm} {
+    /* IGenerator */
+	.sc_igenerator_form_field.sc_igenerator_form_field_prompt {
+		width: 100%;
+	}
+	.sc_igenerator_form_field_prompt {
+		.sc_igenerator_form_field_prompt_button {
+			padding: 0 1em;
+		}
+	}
+	.sc_igenerator_form_field_tags_item {
+		padding: 0.25em 0.75em;
+	}
+	.sc_igenerator_images .sc_igenerator_images_item {
+		flex-basis: 50%;
+	}
+	.sc_igenerator_images_columns_1 .sc_igenerator_images_item {
+		flex-basis: 100%;
+	}
+	.sc_igenerator_limits {
+		@include flex-direction(column);
+		@include flex-justify-content(flex-start);
+		@include flex-align-items(center);
+	
+		&.sc_igenerator_form_align_left {
+			@include flex-align-items(flex-start);
+		}
+		&.sc_igenerator_form_align_right {
+			@include flex-align-items(flex-end);
+		}
+	
+		.sc_igenerator_limits_total {
+			margin-right: 0.3em;
+		}
+	}
+	.sc_igenerator_message {
+		min-width: 75%;
+	}
+}
+
+//@mixin sc_igenerator--xs() {
+@media #{$media_xs} {
+	/* IGenerator */
+	.sc_igenerator_form_field_tags {
+		@include flex-direction(column);
+	}
+	.sc_igenerator_form_field_tags_label {
+		padding: 0 0 0.5em 0;
+	}
+}
